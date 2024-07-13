@@ -162,8 +162,6 @@ This project leverages Uniswap v4 hooks to create a smart contract that logs tra
 
 ### [Instructions on How to Use](https://github.com/ShaneSCalder/Fluid-Reserve/tree/main/Contracts)
 
-Sure! Here’s a brief description of the PancakeSwap hook and what it does, along with a link to the instructions for use:
-
 ---
 
 # PancakeSwap Hook for Token Transaction Logging
