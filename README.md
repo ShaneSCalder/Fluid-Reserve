@@ -138,4 +138,17 @@ Solution Overview
 - Machine Learning Enhancements: Incorporate advanced machine learning techniques, such as reinforcement learning with deep neural networks (Deep Q-Learning), to enhance the decision-making capabilities of the agents.
 
 - Scalability and Adaptability: Ensure the multi-agent system is scalable and can adapt to evolving market conditions and new data sources.
+---
 
+# Uniswap Hook for Pool Data Logging
+
+This project leverages Uniswap v4 hooks to create a smart contract that logs transaction data from Uniswap pools. The contract, deployed using Hardhat, interacts with Uniswap pools to fetch and log transaction details such as transaction hash, block number, sender, receiver, gas used, and timestamp. The logged data is then exported to a JSON file for further analysis or integration into other DeFi applications.
+
+### Key Features
+
+- **Uniswap v4 Hooks Integration**: Utilizes Uniswap v4 hooks for enhanced interaction with Uniswap pools.
+- **Comprehensive Data Logging**: Captures detailed transaction data including transaction hash, block number, addresses, gas used, and timestamps.
+- **JSON Export**: Logs transaction data into a JSON file for easy access and analysis.
+
+### [Instructions on How to Use](https://github.com/ShaneSCalder/Fluid-Reserve/tree/main/Contracts)
+ 
