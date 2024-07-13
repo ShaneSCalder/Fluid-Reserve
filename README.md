@@ -42,7 +42,7 @@ Action Space: Define actions such as adding liquidity, removing liquidity, or ad
 
 3. Risk Mitigation Strategies
 
-Sandwich Attack Mitigation: Develop strategies to detect and avoid sandwich attacks, such as monitoring for suspicious transaction patterns and adjusting liquidity positions accordingly.
+- Sandwich Attack Mitigation: Develop strategies to detect and avoid sandwich attacks, such as monitoring for suspicious transaction patterns and adjusting liquidity positions accordingly.
 
 - Arbitrage Reduction: Implement measures to minimize the agents’ exposure to arbitrage, such as setting tight ranges for liquidity provision and dynamically adjusting these ranges based on market and sentiment conditions.
 
