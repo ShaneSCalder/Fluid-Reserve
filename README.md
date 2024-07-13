@@ -66,15 +66,21 @@ Action Space: Define actions such as adding liquidity, removing liquidity, or ad
 
 - Scalability and Adaptability: Ensure the multi-agent system is scalable and can adapt to evolving market conditions and new data sources.
 
+---
 
 ## Q-Learning Meta Stack for Time-Series Predictions Work Flow
 
 <img width="2880" alt="Fluid-Reserve" src="https://github.com/user-attachments/assets/0bf14202-7d4d-409d-86dd-440d3550baa9">
 
+---
+
 - Times series models and tools can be alterred to provide different outputs, Ai Q learning environment is modular and can support different requirements and outcomes. 
+
+---
 
 ![Digital_Island](https://github.com/user-attachments/assets/5c2d9d43-5782-48ff-8854-efab226d3cf0)
 
+---
 
 # Maximizing short term times series profits while reducing risk
 
@@ -83,6 +89,8 @@ Action Space: Define actions such as adding liquidity, removing liquidity, or ad
 In decentralized finance (DeFi) and cryptocurrency trading, identifying optimal trading opportunities is crucial for maximizing returns. The volatility and complexity of markets for assets such as BTC, ETH, CAKE, BNB, and UNI present significant challenges. Utilizing advanced machine learning techniques, specifically Q-learning with a multi-agent approach, can enable traders to navigate these markets effectively.
 
 This project aims to develop a multi-agent Q-learning based trading system that dynamically adjusts trading strategies in response to market events and sentiment analysis. The agents will focus on identifying trading opportunities for BTC, ETH, CAKE, BNB, and UNI, leveraging time series data, market indicators, and sentiment analysis from various sources like Twitter, Gecko, and betting pools.
+
+---
 
 ## Objectives
 
@@ -93,7 +101,9 @@ This project aims to develop a multi-agent Q-learning based trading system that 
 
 4. Profit Maximization: Ensure the agents can adjust trading positions to maximize returns based on historical, real-time market data, and sentiment analysis.
 
-Solution Overview
+---
+
+## Solution Overview
 
 1. Multi-Agent Q-learning Algorithm Design
 
@@ -151,4 +161,22 @@ This project leverages Uniswap v4 hooks to create a smart contract that logs tra
 - **JSON Export**: Logs transaction data into a JSON file for easy access and analysis.
 
 ### [Instructions on How to Use](https://github.com/ShaneSCalder/Fluid-Reserve/tree/main/Contracts)
- 
+
+Sure! Here’s a brief description of the PancakeSwap hook and what it does, along with a link to the instructions for use:
+
+---
+
+# PancakeSwap Hook for Token Transaction Logging
+
+This project leverages PancakeSwap's smart contracts to create a logging system for token transactions. The deployed contract interacts with PancakeSwap pools to fetch and log detailed transaction data such as token addresses, transaction hash, block number, sender, receiver, amount, gas used, and timestamp. The logged data is then exported to a JSON file for further analysis or integration into other DeFi applications.
+
+### Key Features
+
+- **PancakeSwap Integration**: Utilizes PancakeSwap's smart contracts to log token transactions.
+- **Comprehensive Data Logging**: Captures detailed transaction data including token addresses, transaction hash, block number, sender, receiver, amount, gas used, and timestamp.
+- **JSON Export**: Logs transaction data into a JSON file for easy access and analysis.
+
+### [Instructions on How to Use](https://github.com/ShaneSCalder/Fluid-Reserve/tree/main/Contracts)
+
+---
+
