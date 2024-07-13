@@ -66,6 +66,13 @@ Action Space: Define actions such as adding liquidity, removing liquidity, or ad
 
 - Scalability and Adaptability: Ensure the multi-agent system is scalable and can adapt to evolving market conditions and new data sources.
 
+
+## Q-Learning Meta Stack for Time-Series Predictions Work Flow
+
+<img width="2880" alt="Fluid-Reserve" src="https://github.com/user-attachments/assets/0bf14202-7d4d-409d-86dd-440d3550baa9">
+
+- Times series models and tools can be alterred to provide different outputs, Ai Q learning environment is modular and can support different requirements and outcomes. 
+
 ![Digital_Island](https://github.com/user-attachments/assets/5c2d9d43-5782-48ff-8854-efab226d3cf0)
 
 
