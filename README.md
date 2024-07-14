@@ -182,7 +182,7 @@ This project leverages PancakeSwap's smart contracts to create a logging system 
 
 ---
 
-## Fluid Reserve
+# Fluid Reserve
 
 Fluid Reserve is a sophisticated web application built with Go that offers an array of features tailored for AI trading, data logging from decentralized exchanges, and token price analysis. The application integrates with MetaMask for wallet connectivity, providing a seamless and interactive user experience.
 
@@ -318,7 +318,7 @@ model = train_random_forest(data)
 model.save('models/random_forest_model.pkl')
 ```
 
-### Future Work
+## Future Work
 
 While this repository provides the foundational elements, future work involves integrating a Q-learning environment to dynamically select and employ these trained models in real-time data prediction scenarios.
 
@@ -332,7 +332,7 @@ For detailed instructions and additional information, please visit the [Fluid Re
 
 Our Q-Learning Meta Stack incorporates a robust risk management system that is critical for minimizing losses and ensuring the stability of investments. The AI trading agents primarily use stablecoins such as USDC to mitigate risks associated with market volatility.
 
-#### Key Components:
+## Key Components:
 
 - **Stablecoin Utilization**: By using stablecoins like USDC, the agents can protect the value of the investments from the high volatility often seen in cryptocurrency markets. This helps in maintaining a stable portfolio value.
 
@@ -340,7 +340,7 @@ Our Q-Learning Meta Stack incorporates a robust risk management system that is c
 
 - **Emergency Exit Strategy**: In scenarios where the agent exits or exhibits unpredictable behavior (referred to as "hallucination"), the risk management system triggers an emergency conversion of all assets into stablecoins. This rapid response ensures that losses are capped and funds are preserved.
 
-#### Importance of Risk Management
+## Importance of Risk Management
 
 Implementing a stringent risk management system is essential for:
 
