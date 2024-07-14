@@ -248,3 +248,5 @@ This high-level overview provides a concise summary of what the Go application d
 
 ---
 
+![Aanne](https://github.com/user-attachments/assets/0e5b2224-d523-42bb-a9e8-5c8638721e98)
+
