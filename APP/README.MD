@@ -54,6 +54,10 @@ Fluid Reserve is a sophisticated web application that allows users to interact w
 1. **Run the application**:
    ```sh
    ./bin/main
+
+or 
+
+go run cmd/main.go
    ```
 
 2. **Open your browser** and navigate to `http://localhost:8080`.
