@@ -104,6 +104,7 @@ This project aims to develop a multi-agent Q-learning based trading system that 
 
 4. Profit Maximization: Ensure the agents can adjust trading positions to maximize returns based on historical, real-time market data, and sentiment analysis.
 
+5. Utilize Stable coins like USDC (Circle) to optimize risk management.
 ---
 
 ## Solution Overview
