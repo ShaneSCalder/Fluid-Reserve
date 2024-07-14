@@ -178,3 +178,73 @@ This project leverages PancakeSwap's smart contracts to create a logging system 
 
 ---
 
+## Fluid Reserve
+
+Fluid Reserve is a sophisticated web application built with Go that offers an array of features tailored for AI trading, data logging from decentralized exchanges, and token price analysis. The application integrates with MetaMask for wallet connectivity, providing a seamless and interactive user experience.
+
+### High-Level Overview
+
+### **Features**
+
+- **AI Trading Agents**: 
+  - Users can select and configure various AI trading agents to perform different trading strategies. These agents leverage advanced machine learning models to make informed trading decisions.
+
+- **Data Hooks for Uniswap and PancakeSwap**:
+  - The application includes smart contracts that log transaction data from Uniswap and PancakeSwap. This data is exported to JSON files for further analysis or integration into other DeFi applications.
+
+- **Token Price Analysis**:
+  - Users can visualize token price movements with interactive charts. The charts display critical metrics like trading volume and momentum, providing deep insights into market behavior.
+
+- **MetaMask Integration**:
+  - Users can connect their MetaMask wallet directly from the web interface, allowing them to interact with the application seamlessly. This feature enhances the user experience by providing easy access to blockchain interactions.
+
+### **Installation and Usage**
+
+To get started with Fluid Reserve, follow the installation instructions provided in the GitHub repository:
+
+[Fluid Reserve GitHub Repository](https://github.com/ShaneSCalder/Fluid-Reserve/tree/main/APP)
+
+---
+
+### **Installation Instructions (from GitHub)**
+
+1. **Clone the repository**:
+   ```sh
+   git clone https://github.com/yourusername/fluid-reserve.git
+   cd fluid-reserve
+   ```
+
+2. **Install Go**: Ensure you have Go installed. You can download it from [golang.org](https://golang.org/).
+
+3. **Install dependencies**:
+   ```sh
+   go mod tidy
+   ```
+
+4. **Build the application**:
+   ```sh
+   go build -o bin/main ./cmd/main.go
+   ```
+
+5. **Run the application**:
+   ```sh
+   ./bin/main
+   ```
+
+6. **Open your browser** and navigate to `http://localhost:8080`.
+
+### **MetaMask Integration**
+
+To connect your MetaMask wallet:
+1. Click the "Connect Wallet" button in the navbar.
+2. Allow the connection in the MetaMask popup.
+3. Your wallet address will be displayed on the button upon successful connection.
+
+For detailed instructions and additional information, please visit the [Fluid Reserve GitHub Repository](https://github.com/ShaneSCalder/Fluid-Reserve/tree/main/APP).
+
+---
+
+This high-level overview provides a concise summary of what the Go application does, its key features, and instructions on how to get started, including a link to the repository for further details.
+
+---
+
