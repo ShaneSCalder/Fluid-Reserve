@@ -3,9 +3,9 @@
 
 ![FluidReservelogo](https://github.com/user-attachments/assets/659d0930-8a34-484e-9152-a9c9f422b199)
 
-# Strategic Liquidity Provisions and Management 
+# Problem Statement 1: 
 
-## Problem Statement
+## Strategic Liquidity Provisions and Management 
 
 In decentralized finance (DeFi), Uniswap v4 and PancakeSwap have emerged as leading automated market makers (AMMs) allowing for decentralized token swaps. However, liquidity providers face various challenges, including impermanent loss, sandwich attacks, and arbitrage opportunities that can affect their profitability. Additionally, market sentiment significantly influences these opportunities. Thus, integrating sentiment analysis can enhance the effectiveness of liquidity provision strategies across multiple platforms.
 
@@ -81,10 +81,9 @@ Action Space: Define actions such as adding liquidity, removing liquidity, or ad
 ![Digital_Island](https://github.com/user-attachments/assets/5c2d9d43-5782-48ff-8854-efab226d3cf0)
 
 ---
+# Problem Statement 2: 
 
-# Maximizing short term times series profits while reducing risk
-
-## Problem Statement
+## Maximizing short term times series profits while reducing risk
 
 In decentralized finance (DeFi) and cryptocurrency trading, identifying optimal trading opportunities is crucial for maximizing returns. The volatility and complexity of markets for assets such as BTC, ETH, CAKE, BNB, and UNI present significant challenges. Utilizing advanced machine learning techniques, specifically Q-learning with a multi-agent approach, can enable traders to navigate these markets effectively.
 
