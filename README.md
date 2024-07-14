@@ -328,10 +328,6 @@ For detailed instructions and additional information, please visit the [Fluid Re
 
 ---
 
-Sure! Here is a short section for your `README.md` file that explains the importance of the risk management system using stablecoins like USDC:
-
----
-
 ### Risk Management System
 
 Our Q-Learning Meta Stack incorporates a robust risk management system that is critical for minimizing losses and ensuring the stability of investments. The AI trading agents primarily use stablecoins such as USDC to mitigate risks associated with market volatility.
