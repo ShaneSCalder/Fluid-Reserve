@@ -21,6 +21,10 @@ This project aims to develop a multi-agent Q-learning based liquidity agent that
 
 4. Profit Maximization: Ensure the agents can adjust liquidity positions to maximize returns based on historical, real-time market data, and sentiment analysis across both platforms.
 
+5. Utilize Stable coins like USDC (Circle) to optimize risk management.
+
+---
+
 ## Solution Overview
 
 1. Multi-Agent Q-learning Algorithm Design
