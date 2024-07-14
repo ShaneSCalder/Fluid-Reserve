@@ -1,0 +1,182 @@
+[
+    {
+        "test_set": 1,
+        "average_reward": -16261.196007645145,
+        "total_rewards": [
+            -162611.96007645145,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "final_portfolio_value": 10000.0,
+        "name": "Ddave"
+    },
+    {
+        "test_set": 2,
+        "average_reward": 0.0,
+        "total_rewards": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "final_portfolio_value": 10000.0,
+        "name": "Ddave"
+    },
+    {
+        "test_set": 3,
+        "average_reward": 0.0,
+        "total_rewards": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "final_portfolio_value": 10000.0,
+        "name": "Ddave"
+    },
+    {
+        "test_set": 4,
+        "average_reward": 0.0,
+        "total_rewards": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "final_portfolio_value": 10000.0,
+        "name": "Ddave"
+    },
+    {
+        "test_set": 5,
+        "average_reward": 0.0,
+        "total_rewards": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "final_portfolio_value": 10000.0,
+        "name": "Ddave"
+    },
+    {
+        "test_set": 6,
+        "average_reward": 0.0,
+        "total_rewards": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "final_portfolio_value": 10000.0,
+        "name": "Ddave"
+    },
+    {
+        "test_set": 7,
+        "average_reward": 0.0,
+        "total_rewards": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "final_portfolio_value": 10000.0,
+        "name": "Ddave"
+    },
+    {
+        "test_set": 8,
+        "average_reward": 0.0,
+        "total_rewards": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "final_portfolio_value": 10000.0,
+        "name": "Ddave"
+    },
+    {
+        "test_set": 9,
+        "average_reward": 0.0,
+        "total_rewards": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "final_portfolio_value": 10000.0,
+        "name": "Ddave"
+    },
+    {
+        "test_set": 10,
+        "average_reward": 0.0,
+        "total_rewards": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "final_portfolio_value": 10000.0,
+        "name": "Ddave"
+    }
+]
