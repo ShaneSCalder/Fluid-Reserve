@@ -1,0 +1,191 @@
+{{ define "content" }}
+<head>
+    <style>
+        .hero {
+            display: flex;
+            align-items: center;
+            padding: 40px 20px;
+            background: #001f3f;
+            color: white;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+        .hero img {
+            max-width: 200px;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+        .hero .profile {
+            max-width: 800px;
+        }
+        .btn-deep-pink {
+            background-color: #c71585;
+            border-color: #c71585;
+            color: white;
+        }
+        .btn-deep-pink:hover {
+            background-color: #b01372;
+            border-color: #b01372;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #001f3f;
+            color: white;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            border-radius: 10px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .stats-table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        .stats-table th, .stats-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .stats-table th {
+            background-color: #333;
+            color: white;
+        }
+        .stats-table td {
+            background-color: #001f3f;
+            color: white;
+        }
+    </style>
+</head>
+
+<div class="hero">
+    <img src="/static/images/Aanne.png" alt="Aanne">
+    <div class="profile">
+        <h2>Aanne</h2>
+        <p><strong>Bio:</strong> Aanne is a cutting-edge analytical trading AI designed with precision and sophistication. Her sleek metallic visage and glowing blue eyes signify her intelligence and unwavering focus on market analysis. With her fiber-optic hair lighting up as she processes data, Aanne is the epitome of professionalism. She operates in a high-tech trading floor, effortlessly navigating complex graphs and charts to provide accurate and timely financial insights.</p>
+        <button class="btn btn-deep-pink" onclick="showStats('Aanne')">Show Stats</button>
+    </div>
+</div>
+
+<div class="hero">
+    <img src="/static/images/Aabby.png" alt="Aabby">
+    <div class="profile">
+        <h2>Aabby</h2>
+        <p><strong>Bio:</strong> Aabby is a friendly yet highly proficient analytical trading AI. Her warm metallic face and soft green LED eyes reflect her calm and dependable nature. Aabby's elegant design and stylish, futuristic business attire make her approachable while maintaining a professional edge. Working from a serene, high-tech office overlooking a city skyline, she excels in monitoring market trends and delivering reliable financial data.</p>
+        <button class="btn btn-deep-pink" onclick="showStats('Aabby')">Show Stats</button>
+    </div>
+</div>
+
+<div class="hero">
+    <img src="/static/images/Ddave.png" alt="Ddave">
+    <div class="profile">
+        <h2>Ddave</h2>
+        <p><strong>Bio:</strong> Ddave is a robust and confident analytical trading AI known for his strong presence and analytical prowess. With sharp, angular features and piercing red eyes, Ddave embodies determination. His modern, tech-infused business suit is equipped with integrated digital components, enhancing his capabilities. Operating from an advanced control room, Ddave meticulously analyzes real-time stock market data, financial charts, and trading algorithms.</p>
+        <button class="btn btn-deep-pink" onclick="showStats('Ddave')">Show Stats</button>
+    </div>
+</div>
+
+<div class="hero">
+    <img src="/static/images/Ddex.png" alt="Ddex">
+    <div class="profile">
+        <h2>Ddex</h2>
+        <p><strong>Bio:</strong> Ddex is an innovative analytical trading AI with a sleek and agile design. His smooth, polished metal face and vibrant purple LED eyes showcase his intelligence and creativity. Ddex's cutting-edge outfit blends business fashion with high-tech elements, including a digital wristband for monitoring market fluctuations. Set against a futuristic cityscape, he excels in navigating dynamic financial data and providing insightful trading analytics.</p>
+        <button class="btn btn-deep-pink" onclick="showStats('Ddex')">Show Stats</button>
+    </div>
+</div>
+
+<!-- The Modal -->
+<div id="statsModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modal-title"></h2>
+        <div id="modal-body"></div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        fetch('/static/data/ranked_agents_stats.json')
+            .then(response => response.json())
+            .then(data => {
+                window.agentStats = data;
+            });
+
+        window.showStats = function(agentName) {
+            const modal = document.getElementById('statsModal');
+            const modalTitle = document.getElementById('modal-title');
+            const modalBody = document.getElementById('modal-body');
+            
+            modalTitle.innerText = `${agentName} Stats`;
+            modalBody.innerHTML = '';
+
+            const agentData = window.agentStats.filter(agent => agent.name === agentName);
+
+            agentData.forEach(agent => {
+                const table = document.createElement('table');
+                table.classList.add('stats-table');
+                table.innerHTML = `
+                    <thead>
+                        <tr>
+                            <th>Test Set</th>
+                            <th>Average Reward</th>
+                            <th>Total Rewards</th>
+                            <th>Final Portfolio Value</th>
+                            <th>Rank</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>${agent.test_set}</td>
+                            <td>${agent.average_reward}</td>
+                            <td>${agent.total_rewards.join(', ')}</td>
+                            <td>${agent.final_portfolio_value}</td>
+                            <td>${agent.rank}</td>
+                        </tr>
+                    </tbody>
+                `;
+                modalBody.appendChild(table);
+            });
+
+            modal.style.display = "block";
+        };
+
+        window.closeModal = function() {
+            document.getElementById('statsModal').style.display = "none";
+        };
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('statsModal');
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    });
+</script>
+{{ end }}
+
+
+

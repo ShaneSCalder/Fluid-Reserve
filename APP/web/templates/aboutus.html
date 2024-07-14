@@ -1,0 +1,142 @@
+{{ define "content" }}
+<head>
+    <style>
+        .hero {
+            padding: 60px 20px;
+            background: #001f3f;
+            color: white;
+            text-align: center;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+        .section {
+            padding: 40px 20px;
+            margin-top: 20px;
+            border-radius: 15px;
+        }
+        .section-light {
+            background: #f8f9fa;
+            color: black;
+        }
+        .section-dark {
+            background: #001f3f;
+            color: white;
+        }
+        .btn-deep-pink {
+            background-color: #c71585;
+            border-color: #c71585;
+            color: white;
+        }
+        .btn-deep-pink:hover {
+            background-color: #b01372;
+            border-color: #b01372;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #001f3f;
+            color: white;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .chart-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<div class="hero">
+    <h1>Data Hooks</h1>
+    <p>Explore our innovative solutions for data logging from Uniswap and PancakeSwap using hooks.</p>
+</div>
+
+<div class="section section-light">
+    <h2>Uniswap Hook for Pool Data Logging</h2>
+    <p>This project leverages Uniswap v4 hooks to create a smart contract that logs transaction data from Uniswap pools. The contract, deployed using Hardhat, interacts with Uniswap pools to fetch and log transaction details such as transaction hash, block number, sender, receiver, gas used, and timestamp. The logged data is then exported to a JSON file for further analysis or integration into other DeFi applications.</p>
+    <ul>
+        <li><strong>Uniswap v4 Hooks Integration:</strong> Utilizes Uniswap v4 hooks for enhanced interaction with Uniswap pools.</li>
+        <li><strong>Comprehensive Data Logging:</strong> Captures detailed transaction data including transaction hash, block number, addresses, gas used, and timestamps.</li>
+        <li><strong>JSON Export:</strong> Logs transaction data into a JSON file for easy access and analysis.</li>
+    </ul>
+    <p><a href="https://github.com/ShaneSCalder/Fluid-Reserve/tree/main/Contracts" class="btn btn-deep-pink" target="_blank">Instructions on How to Use</a></p>
+</div>
+
+<div class="section section-dark">
+    <h2>PancakeSwap Hook for Token Transaction Logging</h2>
+    <p>This project leverages PancakeSwap's smart contracts to create a logging system for token transactions. The deployed contract interacts with PancakeSwap pools to fetch and log detailed transaction data such as token addresses, transaction hash, block number, sender, receiver, amount, gas used, and timestamp. The logged data is then exported to a JSON file for further analysis or integration into other DeFi applications.</p>
+    <ul>
+        <li><strong>PancakeSwap Integration:</strong> Utilizes PancakeSwap's smart contracts to log token transactions.</li>
+        <li><strong>Comprehensive Data Logging:</strong> Captures detailed transaction data including token addresses, transaction hash, block number, sender, receiver, amount, gas used, and timestamp.</li>
+        <li><strong>JSON Export:</strong> Logs transaction data into a JSON file for easy access and analysis.</li>
+    </ul>
+    <p><a href="https://github.com/ShaneSCalder/Fluid-Reserve/tree/main/Contracts" class="btn btn-deep-pink" target="_blank">Instructions on How to Use</a></p>
+</div>
+
+<div class="section section-light">
+    <h2>Token Price Analysis</h2>
+    <p>Analyze the token price movements with our interactive charts.</p>
+    <button class="btn btn-deep-pink" onclick="showGraphModal('static/data/CAKE-USD_volume_momentum_analysis.png')">View CAKE-USD Volume and Momentum</button>
+</div>
+
+<!-- The Modal for Graph -->
+<div id="graphModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeGraphModal()">&times;</span>
+        <h2>CAKE-USD Price Analysis</h2>
+        <img id="chart-img" class="chart-img" src="" alt="CAKE-USD Chart">
+    </div>
+</div>
+
+<script>
+    function showGraphModal(image) {
+        const modal = document.getElementById('graphModal');
+        const chartImg = document.getElementById('chart-img');
+        chartImg.src = image; // Ensure this path is correct
+        modal.style.display = "block";
+    }
+
+    function closeGraphModal() {
+        document.getElementById('graphModal').style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        const modal = document.getElementById('graphModal');
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+{{ end }}
+
+
+
+
+

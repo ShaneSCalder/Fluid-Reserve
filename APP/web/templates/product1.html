@@ -1,0 +1,154 @@
+{{ define "content" }}
+<head>
+    <style>
+        .hero {
+            padding: 60px 20px;
+            background: #001f3f;
+            color: white;
+            text-align: center;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+        .btn-deep-pink {
+            background-color: #c71585;
+            border-color: #c71585;
+            color: white;
+        }
+        .btn-deep-pink:hover {
+            background-color: #b01372;
+            border-color: #b01372;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #001f3f;
+            color: white;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            border-radius: 10px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<div class="hero">
+    <h1>Agent Trading</h1>
+    <p>Select your trading agent and set your trading parameters below:</p>
+</div>
+
+<form id="trading-form">
+    <div class="form-row align-items-end">
+        <div class="form-group col-md-3">
+            <label for="agent">Select Trading Agent:</label>
+            <select class="form-control" id="agent" name="agent">
+                <option value="Aabby">Aabby</option>
+                <option value="Aanne">Aanne</option>
+                <option value="Ddave">Ddave</option>
+                <option value="Ddex">Ddex</option>
+            </select>
+        </div>
+        <div class="form-group col-md-2">
+            <label for="maxLoss">Maximum Loss (%):</label>
+            <input type="number" class="form-control" id="maxLoss" name="maxLoss" placeholder="Enter max loss %">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="investment">Investment Amount ($):</label>
+            <input type="number" class="form-control" id="investment" name="investment" placeholder="Enter investment amount">
+        </div>
+        <div class="form-group col-md-2">
+            <label for="duration">Duration (days):</label>
+            <input type="number" class="form-control" id="duration" name="duration" value="14" readonly>
+        </div>
+        <div class="form-group col-md-2">
+            <button type="button" class="btn btn-primary" id="start-btn">Start</button>
+        </div>
+    </div>
+</form>
+
+<!-- The Modal -->
+<div id="resultModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Trading Result</h2>
+        <div id="modal-body"></div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const startBtn = document.getElementById('start-btn');
+        startBtn.addEventListener('click', function() {
+            const agent = document.getElementById('agent').value;
+            fetch('/static/data/ranked_agents_stats.json')
+                .then(response => response.json())
+                .then(data => {
+                    const agentData = data.filter(item => item.name === agent);
+                    if (agentData.length > 0) {
+                        const randomIndex = Math.floor(Math.random() * agentData.length);
+                        const selectedData = agentData[randomIndex];
+
+                        setTimeout(() => {
+                            showResultModal(selectedData);
+                        }, 5000); // 5 second delay
+                    } else {
+                        alert('No data found for the selected agent.');
+                    }
+                });
+        });
+
+        function showResultModal(data) {
+            const modal = document.getElementById('resultModal');
+            const modalBody = document.getElementById('modal-body');
+            
+            modalBody.innerHTML = `
+                <p><strong>Agent:</strong> ${data.name}</p>
+                <p><strong>Test Set:</strong> ${data.test_set}</p>
+                <p><strong>Average Reward:</strong> ${data.average_reward}</p>
+                <p><strong>Total Rewards:</strong> ${data.total_rewards.join(', ')}</p>
+                <p><strong>Final Portfolio Value:</strong> ${data.final_portfolio_value}</p>
+                <p><strong>Rank:</strong> ${data.rank}</p>
+            `;
+
+            modal.style.display = "block";
+        }
+
+        window.closeModal = function() {
+            document.getElementById('resultModal').style.display = "none";
+        };
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('resultModal');
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        };
+    });
+</script>
+{{ end }}
+
+
+
+
