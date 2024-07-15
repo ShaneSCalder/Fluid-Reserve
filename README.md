@@ -1,11 +1,12 @@
 # Fluid-Reserve
  Fluid Reserve ETHGlobal Brussels hackathon Project July 12 - 14 
 
-![FluidReservelogo]([https://github.com/user-attachments/assets/659d0930-8a34-484e-9152-a9c9f422b199](https://ethglobal.com/showcase/fluid-reserve-x4m6r))
+![FluidReserve2](https://github.com/user-attachments/assets/6bc882c4-4edd-42d9-ae7d-39bc3d934ab5)
+
 
 ---
 
-[ETHGlobal Hackathon Project Page](https://github.com/ShaneSCalder/Fluid-Reserve/tree/main/APP)
+[ETHGlobal Hackathon Project Page]([https://github.com/ShaneSCalder/Fluid-Reserve/tree/main/APP](https://ethglobal.com/showcase/fluid-reserve-x4m6r))
 
 ---
 
