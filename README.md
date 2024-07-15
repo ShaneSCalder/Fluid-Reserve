@@ -331,7 +331,8 @@ While this repository provides the foundational elements, future work involves i
 
 ---
 
-For detailed instructions and additional information, please visit the [Fluid Reserve GitHub Repository]([https://github.com/ShaneSCalder/Fluid-Reserve/tree/main/Trained Models](https://github.com/ShaneSCalder/Fluid-Reserve/tree/main/Trained%20Models)).
+For detailed instructions and additional information, please visit the [Fluid Reserve GitHub Repository](https://github.com/ShaneSCalder/Fluid-Reserve/tree/main/Trained%20Models)
+
 
 ---
 
