@@ -6,7 +6,7 @@
 
 ---
 
-[ETHGlobal Hackathon Project Page]([https://github.com/ShaneSCalder/Fluid-Reserve/tree/main/APP](https://ethglobal.com/showcase/fluid-reserve-x4m6r))
+[ETHGlobal Hackathon Project Page](https://ethglobal.com/showcase/fluid-reserve-x4m6r)
 
 ---
 
